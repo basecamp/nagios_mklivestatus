@@ -32,7 +32,7 @@ module Nagios::MkLiveStatus::QueryHelper
       return nagmk_filter(predicates[2], predicates[3], predicates[4])
     end
 
-    raise Nagios::MkLiveStatus::QueryException.new("Can't create filter because the expression doesn't match /^(Filter: )?(\S+) (\S+) ?(\S+)?$/")
+    raise Nagios::MkLiveStatus::QueryException.new("Can't create filter because the expression '#{filter_str}' doesn't match /^(Filter: )?(\S+) (\S+) ?(\S+)?$/")
   end
 
   # Create a stats with parameters.
